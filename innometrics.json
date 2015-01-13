@@ -1,0 +1,21 @@
+{
+    "version_name": "Alchemy app",
+    "version_description": "",
+    "pages": [{
+        "name": "Setting App",
+        "type": "internal",
+        "content": "frontend/settings.html"
+    }],
+    "permissions": ["stream", "profile.update", "profile.read", "app.read.own"],
+    "runtime": {
+        "language": "node",
+        "version": "0.10"
+    },
+    "minimum_requirements": {
+        "memory": 100
+    },
+    "env_vars": {
+        "VAR_NAME1": "var value1",
+        "VAR_NAME2": "var value2"
+    }
+}
