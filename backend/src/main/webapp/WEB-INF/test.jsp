@@ -4,6 +4,12 @@
     <title></title>
 </head>
 <body>
-HelloWorld
+HelloWorld<br/>
+
+appId=${profileCloudDAO.appId}<br/>
+companyId=${profileCloudDAO.companyId}<br/>
+bucketId=${profileCloudDAO.bucketId}<br/>
+appKey=${profileCloudDAO.appKey}<br/>
+</table>
 </body>
 </html>
