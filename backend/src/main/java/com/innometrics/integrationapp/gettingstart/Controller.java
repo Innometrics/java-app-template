@@ -1,5 +1,7 @@
 package com.innometrics.integrationapp.gettingstart;
 
+import com.innometrics.utils.app.commons.settings.wrapper.ProfileCloudWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -7,13 +9,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @org.springframework.stereotype.Controller
 public class Controller {
-    @RequestMapping(value = "/")
+
+
+
+    @RequestMapping(value = "/" )
     public String root() {
         return "test";
     }
 
-    @RequestMapping(value = "/payments")
-    public String allPayments() {
-        return "123.jsp";
+    @RequestMapping(value = "/test")
+    public String all() {
+        return "test";
     }
 }

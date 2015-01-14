@@ -8,8 +8,8 @@
     }],
     "permissions": ["stream", "profile.update", "profile.read", "app.read.own"],
     "runtime": {
-        "language": "node",
-        "version": "0.10"
+        "language": "java",
+        "version": "1.7"
     },
     "minimum_requirements": {
         "memory": 100
