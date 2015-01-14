@@ -1,8 +1,5 @@
 package com.innometrics.integrationapp.gettingstart;
 
-import com.innometrics.utils.app.commons.settings.exception.IncorrectConfigurationException;
-import com.innometrics.utils.app.commons.settings.store.ProfileCloudSettings;
-import com.innometrics.utils.app.commons.settings.strategy.OnlyEnvironmentStrategy;
 import com.innometrics.utils.app.commons.settings.wrapper.ProfileCloudWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -19,20 +16,14 @@ public class Controller {
     private ProfileCloudWrapper profileCloudDAO;
 
 
-    @RequestMapping(value = "/" )
+    @RequestMapping(value = "/")
     public String root() {
         return "test";
     }
 
     @RequestMapping(value = "/view")
     public String view(Model model) {
-        try {
-            model.addAttribute("profileCloudDAO",new ProfileCloudSettings(new OnlyEnvironmentStrategy()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (IncorrectConfigurationException e) {
-            e.printStackTrace();
-        }
+        model.addAttribute("profileCloudDAO", profileCloudDAO);
         return "test";
     }
 }
