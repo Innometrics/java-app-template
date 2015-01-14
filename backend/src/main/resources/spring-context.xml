@@ -12,7 +12,7 @@
         <property name="prefix" value="/WEB-INF/" />
         <property name="suffix" value=".jsp" />
     </bean>
-    <!---->
+    
     <!--<bean id="profileCloud" class="com.innometrics.utils.app.commons.settings.wrapper.ProfileCloudWrapper">-->
         <!--<constructor-arg type="java.lang.String" value="http://api.innomdc.com"/>-->
         <!--<constructor-arg type="int" value="80"/>-->
