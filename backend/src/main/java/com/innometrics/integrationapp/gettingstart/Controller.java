@@ -31,7 +31,6 @@ public class Controller {
     @Autowired
     private ProfileCloudWrapper profileCloudDAO;
     List<String> urls = new ArrayList<String>();
-
     @RequestMapping(value = "/", method = RequestMethod.POST, headers = {"Accept=*/*", "Content-Type=*/*"})
     public String root(@RequestBody String body) {
         try {
@@ -40,6 +39,9 @@ public class Controller {
             JsonNode jsonData = profile.getSessions().get(0).getEvents().get(0).getData();
             if (jsonData.has("page-url")) {
                 urls.add(jsonData.get("page-url").toString());
+                if (urls.size()>=10){
+                    urls.remove(0);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
