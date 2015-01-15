@@ -5,10 +5,6 @@
         "name": "Setting App",
         "type": "internal",
         "content": "frontend/settings.html"
-    },{
-        "name": "BackEndView",
-        "type": "internal",
-        "content": "frontend/view"
     }],
     "permissions": ["stream", "profile.update", "profile.read", "app.read.own"],
     "runtime": {
