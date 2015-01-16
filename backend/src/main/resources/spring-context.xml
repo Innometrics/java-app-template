@@ -9,13 +9,15 @@
          http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/" />
-        <property name="suffix" value=".jsp" />
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
     </bean>
-    
+    <bean id="strategy" class="com.innometrics.utils.app.commons.settings.strategy.OnlyEnvironmentStrategy"/>
     <bean id="profileCloud" class="com.innometrics.utils.app.commons.settings.wrapper.ProfileCloudWrapper">
         <constructor-arg type="java.lang.String" value="http://prerelease.innomdc.com"/>
         <constructor-arg type="int" value="80"/>
+        <constructor-arg type="com.innometrics.utils.app.commons.settings.strategy.StrategySettingsType"
+                         value="ONLY_ENVIRONMENT"/>
     </bean>
     <context:component-scan base-package="com.innometrics.integrationapp.gettingstart"/>
     <!--<context:annotation-config/>-->
