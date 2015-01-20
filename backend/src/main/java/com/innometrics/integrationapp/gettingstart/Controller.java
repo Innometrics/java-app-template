@@ -2,15 +2,15 @@ package com.innometrics.integrationapp.gettingstart;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.annotation.JacksonStdImpl;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.innometrics.commons.model.Attribute;
 import com.innometrics.commons.model.Profile;
-import com.innometrics.commons.model.ProfileOutput;
 import com.innometrics.util.JacksonUtil;
 import com.innometrics.utils.app.commons.settings.exception.NoPropertyAvailableException;
 import com.innometrics.utils.app.commons.settings.wrapper.ProfileCloudWrapper;
+import com.sun.deploy.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +26,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * Created by killpack on 13.01.15.
  */
-@org.springframework.stereotype.Controller
+@Component
 public class Controller {
     @Autowired
     private ProfileCloudWrapper profileCloudDAO;
