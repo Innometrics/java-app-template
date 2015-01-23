@@ -10,12 +10,5 @@
     "runtime": {
         "language": "java",
         "version": "1.7"
-    },
-    "minimum_requirements": {
-        "memory": 100
-    },
-    "env_vars": {
-        "VAR_NAME1": "var value1",
-        "VAR_NAME2": "var value2"
     }
 }
